@@ -1,1245 +1,1069 @@
-{
-  "name": "espiritismo-chico-xavier",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@hookform/resolvers": "^5.2.2",
-    "@radix-ui/react-accordion": "^1.2.12",
-    "@radix-ui/react-alert-dialog": "^1.1.15",
-    "@radix-ui/react-aspect-ratio": "^1.1.8",
-    "@radix-ui/react-avatar": "^1.1.11",
-    "@radix-ui/react-checkbox": "^1.3.3",
-    "@radix-ui/react-collapsible": "^1.1.12",
-    "@radix-ui/react-context-menu": "^2.2.16",
-    "@radix-ui/react-dialog": "^1.1.15",
-    "@radix-ui/react-dropdown-menu": "^2.1.16",
-    "@radix-ui/react-hover-card": "^1.1.15",
-    "@radix-ui/react-label": "^2.1.8",
-    "@radix-ui/react-menubar": "^1.1.16",
-    "@radix-ui/react-navigation-menu": "^1.2.14",
-    "@radix-ui/react-popover": "^1.1.15",
-    "@radix-ui/react-progress": "^1.1.8",
-    "@radix-ui/react-radio-group": "^1.3.8",
-    "@radix-ui/react-scroll-area": "^1.2.10",
-    "@radix-ui/react-select": "^2.2.6",
-    "@radix-ui/react-separator": "^1.1.8",
-    "@radix-ui/react-slider": "^1.3.6",
-    "@radix-ui/react-slot": "^1.2.4",
-    "@radix-ui/react-switch": "^1.2.6",
-    "@radix-ui/react-tabs": "^1.1.13",
-    "@radix-ui/react-toggle": "^1.1.10",
-    "@radix-ui/react-toggle-group": "^1.1.11",
-    "@radix-ui/react-tooltip": "^1.2.8",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "cmdk": "^1.1.1",
-    "date-fns": "^4.1.0",
-    "embla-carousel-react": "^8.6.0",
-    "input-otp": "^1.4.2",
-    "lucide-react": "^0.562.0",
-    "next-themes": "^0.4.6",
-    "react": "^19.2.0",
-    "react-day-picker": "^9.13.0",
-    "react-dom": "^19.2.0",
-    "react-hook-form": "^7.70.0",
-    "react-resizable-panels": "^4.2.2",
-    "recharts": "^2.15.4",
-    "sonner": "^2.0.7",
-    "tailwind-merge": "^3.4.0",
-    "vaul": "^1.1.2",
-    "zod": "^4.3.5"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@types/node": "^24.10.1",
-    "@types/react": "^19.2.5",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
-    "autoprefixer": "^10.4.23",
-    "eslint": "^9.39.1",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.5.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.19",
-    "tailwindcss-animate": "^1.0.7",
-    "tw-animate-css": "^1.4.0",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4"
-  }
-}
-import path from "path"
-import react from "@vitejs/plugin-react"
-import { defineConfig } from "vite"
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chico Xavier - Legado de Luz e Amor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-export default defineConfig({
-  base: './',
-  plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-});
-{
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
-}
-{
-  "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2022",
-    "useDefineForClassFields": true,
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "types": ["vite/client"],
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
-  },
-  "include": ["src"]
-}
-{
-  "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "ES2023",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "types": ["node"],
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
-  },
-  "include": ["vite.config.ts"]
-}
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: ["class"],
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  theme: {
-    extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
-          foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
-      },
-      borderRadius: {
-        xl: "calc(var(--radius) + 4px)",
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-        xs: "calc(var(--radius) - 6px)",
-      },
-      boxShadow: {
-        xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        "caret-blink": {
-          "0%,70%,100%": { opacity: "1" },
-          "20%,50%": { opacity: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "caret-blink": "caret-blink 1.25s ease-out infinite",
-      },
-    },
-  },
-  plugins: [require("tailwindcss-animate")],
-}
-export default {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+        :root {
+            --gold: #D4AF37;
+            --deep-blue: #1a1f3d;
+            --spiritual-purple: #2d1b4e;
+            --light-gold: #f4e4bc;
+            --white: #ffffff;
+            --cream: #faf8f3;
+        }
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
-import { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, Play, BookOpen, Heart, Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
-import './App.css';
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--cream);
+            color: #333;
+            overflow-x: hidden;
+        }
 
-// Navigation Component
-function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 31, 61, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
 
-  const navLinks = [
-    { href: '#inicio', label: 'Início' },
-    { href: '#chico', label: 'Chico Xavier' },
-    { href: '#estudos', label: 'Estudos' },
-  ];
+        nav a {
+            color: var(--light-gold);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
 
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/95 backdrop-blur-md border-b border-amber-500/20' : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <a href="#inicio" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
-              <Star className="w-5 h-5 text-slate-950" />
-            </div>
-            <span className="text-xl font-semibold text-amber-100" style={{ fontFamily: 'Cormorant Garamond, serif' }}>Espiritismo</span>
-          </a>
-          
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="text-slate-300 hover:text-amber-400 transition-colors text-sm font-medium">
-                {link.label}
-              </a>
-            ))}
-          </div>
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
 
-          <button className="md:hidden text-slate-300" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-      </div>
+        nav a:hover::after {
+            width: 100%;
+        }
 
-      {isOpen && (
-        <div className="md:hidden bg-slate-950/98 border-b border-amber-500/20">
-          <div className="px-4 py-4 space-y-3">
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="block text-slate-300 hover:text-amber-400 py-2" onClick={() => setIsOpen(false)}>
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--spiritual-purple) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-50px, -50px); }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--light-gold);
+            font-style: italic;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .hero-dates {
+            font-family: 'Cinzel', serif;
+            color: var(--white);
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gold);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sections General */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--deep-blue);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 25%;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        /* Biography Section */
+        .bio-section {
+            background: var(--white);
+            position: relative;
+        }
+
+        .bio-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .bio-image {
+            position: sticky;
+            top: 100px;
+        }
+
+        .bio-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 5px solid var(--gold);
+        }
+
+        .bio-text {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .bio-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--deep-blue), var(--spiritual-purple));
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--gold);
+            font-style: italic;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-size: 6rem;
+            color: rgba(212, 175, 55, 0.2);
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--gold);
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+            width: 50%;
+            padding: 0 2rem;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .timeline-date {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Videos Section */
+        .videos-section {
+            background: linear-gradient(to bottom, var(--cream), var(--white));
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: var(--deep-blue);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info {
+            padding: 1.5rem;
+        }
+
+        .video-info h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--deep-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .video-info p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Teachings Section */
+        .teachings-section {
+            background: var(--deep-blue);
+            color: var(--white);
+            position: relative;
+        }
+
+        .teachings-section .section-title {
+            color: var(--gold);
+        }
+
+        .teachings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .teaching-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .teaching-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .teaching-card:hover::before {
+            left: 100%;
+        }
+
+        .teaching-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .teaching-number {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .teaching-card h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .teaching-card p {
+            font-style: italic;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Books Section */
+        .books-section {
+            background: var(--white);
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--deep-blue), var(--spiritual-purple));
+            color: var(--white);
+            border-radius: 10px;
+            border: 2px solid var(--gold);
+        }
+
+        .stat-number {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0.5rem;
+        }
+
+        .books-list {
+            columns: 2;
+            column-gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .book-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--cream);
+            border-left: 3px solid var(--gold);
+            border-radius: 0 5px 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .book-item:hover {
+            background: var(--light-gold);
+            transform: translateX(5px);
+        }
+
+        .book-title {
+            font-weight: 600;
+            color: var(--deep-blue);
+            display: block;
+        }
+
+        .book-author {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background: var(--cream);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(26, 31, 61, 0.9), transparent);
+            padding: 2rem 1rem 1rem;
+            color: var(--white);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-blue);
+            color: var(--light-gold);
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 3px solid var(--gold);
+        }
+
+        .footer-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-info {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .bio-content {
+                grid-template-columns: 1fr;
+            }
+
+            .bio-image {
+                position: relative;
+                top: 0;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 50px;
+                text-align: left !important;
+            }
+
+            .books-list {
+                columns: 1;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 5px solid var(--gold);
+            border-radius: 5px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: var(--gold);
+            font-size: 3rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#biografia">Biografia</a></li>
+            <li><a href="#linha-tempo">Linha do Tempo</a></li>
+            <li><a href="#videos">Vídeos</a></li>
+            <li><a href="#ensinamentos">Ensinamentos</a></li>
+            <li><a href="#obras">Obras</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+        </ul>
     </nav>
-  );
-}
 
-// Hero Section
-function HeroSection() {
-  return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent" />
-      
-      {/* Floating Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-400/5 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
-      
-      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 mb-8">
-          <Star className="w-4 h-4 text-amber-400" />
-          <span className="text-amber-300 text-sm">Doutrina Espírita</span>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Chico Xavier</h1>
+            <p class="hero-subtitle">"A caridade é o exercício espiritual que nos aproxima de Deus"</p>
+            <p class="hero-dates">1910 — 2002</p>
         </div>
-        
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-gradient leading-tight">
-          Espiritismo &<br />Chico Xavier
-        </h1>
-        
-        <p className="text-xl md:text-2xl text-slate-300 mb-4 max-w-3xl mx-auto" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-          "A caridade começa em casa, mas não deve terminar ali."
-        </p>
-        <p className="text-amber-400/80 text-lg mb-12">— Chico Xavier</p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#chico">
-            <Button size="lg" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-semibold px-8">
-              <Heart className="w-5 h-5 mr-2" />
-              Conhecer Chico Xavier
-            </Button>
-          </a>
-          <a href="#estudos">
-            <Button size="lg" variant="outline" className="border-amber-500/50 text-amber-400 hover:bg-amber-500/10 px-8">
-              <BookOpen className="w-5 h-5 mr-2" />
-              Estudos Espíritas
-            </Button>
-          </a>
-        </div>
-
-        <div className="mt-16 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-amber-500/50 mx-auto" />
-        </div>
-      </div>
+        <div class="scroll-indicator">⌄</div>
     </section>
-  );
-}
 
-// Chico Xavier Section
-function ChicoSection() {
-  const [selectedVideo, setSelectedVideo] = useState<typeof chicoVideos[0] | null>(null);
-
-  const timeline = [
-    {
-      year: "1910",
-      title: "Nascimento",
-      description: "Francisco Cândido Xavier nasce em 2 de abril de 1910, em Pedro Leopoldo, Minas Gerais."
-    },
-    {
-      year: "1927",
-      title: "Primeira Psicografia",
-      description: "Chico psicografa sua primeira mensagem espiritual aos 17 anos, iniciando sua jornada mediúnica."
-    },
-    {
-      year: "1931",
-      title: "Parnaso de Além-Túmulo",
-      description: "Publicação do primeiro livro de poemas psicografados, que trouxe imortalidade literária ao médium."
-    },
-    {
-      year: "1944",
-      title: "Nosso Lar",
-      description: "Psicografia do livro 'Nosso Lar', uma das obras mais importantes da literatura espírita mundial."
-    },
-    {
-      year: "1969",
-      title: "Data Limite",
-      description: "Chico divulga a profecia sobre a 'Data Limite', relacionada à chegada do homem à Lua."
-    },
-    {
-      year: "2002",
-      title: "Desencarne",
-      description: "Chico Xavier desencarna em 30 de junho de 2002, aos 92 anos, deixando um legado de amor e caridade."
-    }
-  ];
-
-  const quotes = [
-    "A caridade começa em casa, mas não deve terminar ali.",
-    "Seja humilde para admitir seus erros, inteligente para aprender com eles e maduro para corrigi-los.",
-    "O amor é a mais nobre, a mais sublime, a mais divina das virtudes.",
-    "Não deixe que as pessoas te façam desistir daquilo que você mais quer na vida.",
-    "A felicidade não está em viver pouco ou muito, mas em viver bem.",
-    "O bem que praticamos hoje é a semente do bem que colheremos amanhã."
-  ];
-
-  const works = [
-    { title: "Nosso Lar", spirit: "André Luiz", year: "1944" },
-    { title: "Os Mensageiros", spirit: "André Luiz", year: "1944" },
-    { title: "Missionários da Luz", spirit: "André Luiz", year: "1945" },
-    { title: "Lázaro Redivivo", spirit: "Irmão X", year: "1945" },
-    { title: "Parnaso de Além-Túmulo", spirit: "Diversos", year: "1932" },
-    { title: "Caminho, Verdade e Vida", spirit: "Emmanuel", year: "1945" },
-    { title: "Ave, Cristo!", spirit: "Emmanuel", year: "1945" },
-    { title: "Entre a Terra e o Céu", spirit: "André Luiz", year: "1944" },
-    { title: "Nos Domínios da Mediunidade", spirit: "André Luiz", year: "1945" },
-    { title: "Action e Reação", spirit: "André Luiz", year: "1945" }
-  ];
-
-  const chicoVideos = [
-    {
-      title: "Documentário Chico Xavier - O Maior Médium do Brasil",
-      description: "Uma jornada completa pela vida e obra do maior médium brasileiro de todos os tempos.",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=640&h=360&fit=crop"
-    },
-    {
-      title: "Mensagens de Chico Xavier para a Humanidade",
-      description: "Compilação das mensagens mais inspiradoras deixadas pelo médium mineiro.",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=640&h=360&fit=crop"
-    },
-    {
-      title: "Chico Xavier - A História Real",
-      description: "Depoimentos e relatos sobre a vida do médium que mudou a história do espiritismo no Brasil.",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?w=640&h=360&fit=crop"
-    },
-    {
-      title: "As Últimas Palavras de Chico Xavier",
-      description: "Os momentos finais e o legado espiritual deixado por Chico Xavier.",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=640&h=360&fit=crop"
-    }
-  ];
-
-  return (
-    <section id="chico" className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950" />
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <Badge className="mb-4 bg-amber-500/20 text-amber-400 border-amber-500/30">
-            <Heart className="w-4 h-4 mr-1" />
-            O Maior Médium Brasileiro
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">Chico Xavier</h2>
-          <p className="text-slate-400 max-w-3xl mx-auto text-lg">
-            Francisco Cândido Xavier (1910-2002) foi um dos maiores médiuns e filantropos da história do Brasil. 
-            Autor de mais de 400 livros psicografados, dedicou sua vida à caridade e à divulgação da doutrina espírita.
-          </p>
-        </div>
-
-        {/* Biography */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-amber-400" style={{ fontFamily: 'Cormorant Garamond, serif' }}>Biografia</h3>
-            <div className="space-y-4 text-slate-300 leading-relaxed">
-              <p>
-                Chico Xavier nasceu em uma humilde família de origem portuguesa em Pedro Leopoldo, Minas Gerais. 
-                Ainda criança, perdeu a mãe, Maria João de Deus, o que marcou profundamente sua vida e sensibilidade.
-              </p>
-              <p>
-                Aos 17 anos, descobriu sua faculdade mediúnica quando começou a psicografar mensagens. 
-                Desde então, dedicou sua vida inteira à mediunidade e à caridade, nunca tendo se casado ou formado família própria.
-              </p>
-              <p>
-                Ao longo de mais de 70 anos de atividade mediúnica, Chico psicografou mais de 400 livros, 
-                vendeu mais de 50 milhões de cópias e doou todos os direitos autorais para obras de caridade. 
-                Foi considerado o "Maior Brasileiro de Todos os Tempos" em votação popular realizada pela Rede Globo em 2012.
-              </p>
+    <section class="bio-section" id="biografia">
+        <h2 class="section-title">Biografia</h2>
+        <div class="bio-content">
+            <div class="bio-image">
+                <img src="https://kimi-web-img.moonshot.cn/img/spiritist.us/23f6627ea3880c8b1fc857f34ec0dae9fc674999.jpg" alt="Chico Xavier">
             </div>
-          </div>
-          
-          <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-            <h3 className="text-xl font-semibold text-amber-400 mb-6" style={{ fontFamily: 'Cormorant Garamond, serif' }}>Linha do Tempo</h3>
-            <div className="space-y-6">
-              {timeline.map((item, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="flex flex-col items-center">
-                    <div className="w-3 h-3 rounded-full bg-amber-500" />
-                    {index < timeline.length - 1 && <div className="w-0.5 flex-1 bg-amber-500/30 mt-2" />}
-                  </div>
-                  <div className="pb-6">
-                    <span className="text-amber-400 font-semibold">{item.year}</span>
-                    <h4 className="text-slate-200 font-medium mt-1">{item.title}</h4>
-                    <p className="text-slate-400 text-sm mt-1">{item.description}</p>
-                  </div>
+            <div class="bio-text">
+                <p>Francisco Cândido Xavier, conhecido carinhosamente como Chico Xavier, nasceu em 2 de abril de 1910 em Pedro Leopoldo, Minas Gerais. Foi um dos maiores médiuns psicógrafos da história do Espiritismo mundial e o autor brasileiro mais lido de todos os tempos, com mais de 45 milhões de livros vendidos.</p>
+                
+                <p>Orfão de mãe aos 5 anos de idade, Chico teve uma infância marcada pela pobreza material mas rica em experiências espirituais. Aos 13 anos, começou a psicografar, revelando uma mediunidade polivalente que se manifestava de diversas formas: psicografia, psicofonia, vidência e materialização.</p>
+
+                <div class="highlight-box">
+                    "Embora ninguém possa voltar atrás e fazer um novo começo, qualquer um pode começar agora a fazer um novo fim."
                 </div>
-              ))}
+
+                <p>Durante mais de 70 anos de atividade mediúnica, Chico Xavier psicografou mais de 460 obras, sendo 412 publicadas em vida e aproximadamente 50 obras póstumas. Seus principais guias espirituais foram Emmanuel e André Luiz, através dos quais transmitiu mensagens de profunda sabedoria espiritual.</p>
+
+                <p>Além de sua obra literária, Chico dedicou-se intensamente à caridade, distribuindo todos os direitos autorais de seus livros para obras assistenciais. Viveu humildemente em Uberaba, Minas Gerais, onde atendeu a milhares de pessoas em busca de conforto espiritual através do "Correio Fraterno".</p>
+
+                <p>Desencarnou em 30 de junho de 2002, aos 92 anos, deixando um legado de amor, paz e esperança que continua a iluminar milhões de vidas em todo o mundo.</p>
             </div>
-          </div>
         </div>
-
-        {/* Quotes */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-semibold text-amber-400 text-center mb-8" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-            Mensagens de Chico Xavier
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {quotes.map((quote, index) => (
-              <div key={index} className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-amber-500/30 transition-colors">
-                <p className="text-slate-300 italic" style={{ fontFamily: 'Cormorant Garamond, serif' }}>"{quote}"</p>
-                <p className="text-amber-400/80 text-sm mt-4">— Chico Xavier</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Works */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-semibold text-amber-400 text-center mb-8" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-            Principais Obras Psicografadas
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {works.map((work, index) => (
-              <div key={index} className="bg-slate-900/30 border border-slate-800 rounded-lg p-4 hover:bg-slate-900/50 hover:border-amber-500/30 transition-all">
-                <h4 className="text-slate-200 font-medium text-sm">{work.title}</h4>
-                <p className="text-slate-500 text-xs mt-1">{work.spirit}</p>
-                <p className="text-amber-400/60 text-xs mt-1">{work.year}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Videos Section - Only Chico Xavier */}
-        <div>
-          <h3 className="text-2xl font-semibold text-amber-400 text-center mb-8" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-            Vídeos sobre Chico Xavier
-          </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {chicoVideos.map((video, index) => (
-              <div 
-                key={index} 
-                className="group bg-slate-900/50 border border-slate-800 rounded-xl overflow-hidden hover:border-amber-500/30 transition-all cursor-pointer"
-                onClick={() => setSelectedVideo(video)}
-              >
-                <div className="aspect-video relative overflow-hidden">
-                  <img 
-                    src={video.thumbnail} 
-                    alt={video.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
-                    <div className="w-16 h-16 rounded-full bg-amber-500/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Play className="w-8 h-8 text-slate-950 ml-1" />
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h4 className="text-xl font-semibold text-slate-100 mb-2" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-                    {video.title}
-                  </h4>
-                  <p className="text-slate-400">{video.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <Dialog open={!!selectedVideo} onOpenChange={() => setSelectedVideo(null)}>
-            <DialogContent className="max-w-4xl bg-slate-950 border-slate-800 p-0 overflow-hidden">
-              <div className="aspect-video">
-                {selectedVideo && (
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={selectedVideo.embedUrl}
-                    title={selectedVideo.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                )}
-              </div>
-              <div className="p-6">
-                <h4 className="text-xl font-semibold text-slate-100 mb-2">{selectedVideo?.title}</h4>
-                <p className="text-slate-400">{selectedVideo?.description}</p>
-              </div>
-            </DialogContent>
-          </Dialog>
-        </div>
-      </div>
     </section>
-  );
-}
 
-// Studies Section
-function StudiesSection() {
-  const topics = [
-    {
-      title: "O Que é o Espiritismo?",
-      content: `O Espiritismo é uma doutrina filosófica, científica e religiosa codificada por Allan Kardec no século XIX. 
-      Baseia-se em três pilares fundamentais: a existência de Deus, a imortalidade da alma e a comunicação dos espíritos com os vivos.
-      
-      A doutrina ensina que os seres humanos são espíritos imortais que reencarnam para evoluir espiritualmente, 
-      aprendendo através das experiências vividas em cada existência física.`
-    },
-    {
-      title: "As Obras Básicas de Allan Kardec",
-      content: `Allan Kardec codificou o Espiritismo através de cinco obras fundamentais:
-      
-      1. O Livro dos Espíritos (1857) - Respostas sobre a natureza dos espíritos, Deus e a vida após a morte
-      2. O Livro dos Médiuns (1861) - Estudo sobre a mediunidade e suas manifestações
-      3. O Evangelho Segundo o Espiritismo (1864) - Interpretação dos ensinamentos de Jesus à luz do Espiritismo
-      4. O Céu e o Inferno (1865) - Sobre a justiça divina e a vida após a morte
-      5. A Gênese (1868) - Concordância entre ciência e religião`
-    },
-    {
-      title: "A Lei de Causa e Efeito",
-      content: `A Lei de Causa e Efeito, ou Lei de Ação e Reação, é um dos princípios fundamentais do Espiritismo. 
-      Ela estabelece que cada indivíduo é responsável por suas ações e colherá os frutos do que plantar.
-      
-      Não existe castigo divino, mas sim consequências naturais de nossas escolhas. 
-      A reencarnação permite que o espírito tenha novas oportunidades de evolução e de reparar erros cometidos.`
-    },
-    {
-      title: "A Mediunidade",
-      content: `A mediunidade é a faculdade de comunicação entre o mundo físico e o mundo espiritual. 
-      Segundo o Espiritismo, todos os seres humanos são médiuns em maior ou menor grau.
-      
-      Existem diferentes tipos de mediunidade:
-      - Física: produção de fenômenos visíveis e palpáveis
-      - Inteligente: transmissão de pensamentos dos espíritos
-      - De cura: transmissão de energias curativas
-      - De efeitos físicos: movimentação de objetos`
-    },
-    {
-      title: "A Reencarnação",
-      content: `A reencarnação é o processo pelo qual o espírito retorna à vida física em um novo corpo 
-      para continuar sua evolução moral e intelectual.
-      
-      Segundo a doutrina espírita, reencarnamos para:
-      - Expiação de faltas cometidas
-      - Provações e missões de auxílio ao próximo
-      - Aperfeiçoamento intelectual e moral
-      - Cumprir compromissos assumidos antes de renascer`
-    },
-    {
-      title: "O Plano Espiritual",
-      content: `O mundo espiritual é organizado em diferentes colônias e dimensões, de acordo com o grau de evolução dos espíritos:
-      
-      - Umbral: região de sofrimento para espíritos atrasados
-      - Colônias de trabalho: onde espíritos se preparam para nova reencarnação
-      - Colônias de amor: para espíritos mais evoluídos
-      - Mundos superiores: dimensões de luz e harmonia
-      
-      A colônia 'Nosso Lar', descrita por André Luiz através de Chico Xavier, é um exemplo de colônia espiritual avançada.`
-    }
-  ];
-
-  return (
-    <section id="estudos" className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900" />
-      
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <Badge className="mb-4 bg-amber-500/20 text-amber-400 border-amber-500/30">
-            <BookOpen className="w-4 h-4 mr-1" />
-            Estudos
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">Estudos Espíritas</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-            Conheça os fundamentos da doutrina espírita, seus princípios filosóficos 
-            e as leis que regem a vida espiritual.
-          </p>
-        </div>
-
-        <Accordion type="single" collapsible className="space-y-4">
-          {topics.map((topic, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="bg-slate-900/50 border border-slate-800 rounded-xl px-6 data-[state=open]:border-amber-500/30">
-              <AccordionTrigger className="text-left text-lg font-semibold text-slate-200 hover:text-amber-400 py-4">
-                {topic.title}
-              </AccordionTrigger>
-              <AccordionContent className="text-slate-400 pb-4 whitespace-pre-line leading-relaxed">
-                {topic.content}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-
-        <div className="mt-16 text-center">
-          <p className="text-slate-500 mb-4">Quer aprofundar seus estudos?</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://www.febnet.org.br" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="border-amber-500/50 text-amber-400 hover:bg-amber-500/10">
-                <BookOpen className="w-4 h-4 mr-2" />
-                Federação Espírita Brasileira
-              </Button>
-            </a>
-            <a href="https://www.chicoxavier.org.br" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="border-amber-500/50 text-amber-400 hover:bg-amber-500/10">
-                <Heart className="w-4 h-4 mr-2" />
-                Instituto Chico Xavier
-              </Button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// Footer
-function Footer() {
-  return (
-    <footer className="py-12 border-t border-slate-800 bg-slate-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
-                <Star className="w-5 h-5 text-slate-950" />
-              </div>
-              <span className="text-xl font-semibold text-amber-100" style={{ fontFamily: 'Cormorant Garamond, serif' }}>Espiritismo</span>
+    <section id="linha-tempo">
+        <h2 class="section-title">Linha do Tempo</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1910</div>
+                    <h3>Nascimento</h3>
+                    <p>Nasce em Pedro Leopoldo, MG, filho de João Cândido Xavier e Maria João de Deus.</p>
+                </div>
             </div>
-            <p className="text-slate-400 max-w-md">
-              Um projeto dedicado à divulgação da doutrina espírita, 
-              das obras de Chico Xavier e do estudo da vida espiritual.
-            </p>
-          </div>
-          
-          <div>
-            <h4 className="text-slate-200 font-semibold mb-4">Links Rápidos</h4>
-            <ul className="space-y-2">
-              <li><a href="#inicio" className="text-slate-400 hover:text-amber-400 transition-colors">Início</a></li>
-              <li><a href="#chico" className="text-slate-400 hover:text-amber-400 transition-colors">Chico Xavier</a></li>
-              <li><a href="#estudos" className="text-slate-400 hover:text-amber-400 transition-colors">Estudos</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-slate-200 font-semibold mb-4">Recursos</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="https://www.febnet.org.br" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-amber-400 transition-colors">
-                  FEB - Federação Espírita
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chicoxavier.org.br" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-amber-400 transition-colors">
-                  Instituto Chico Xavier
-                </a>
-              </li>
-              <li>
-                <a href="https://www.cei.org.br" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-amber-400 transition-colors">
-                  Centro Espírita Ismael
-                </a>
-              </li>
-            </ul>
-          </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1915</div>
+                    <h3>Perda da Mãe</h3>
+                    <p>Fica órfão de mãe aos 5 anos, evento que marcou profundamente sua sensibilidade.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1923</div>
+                    <h3>Primeira Psicografia</h3>
+                    <p>Aos 13 anos, psicografa sua primeira mensagem no Colégio Estadual de Pedro Leopoldo.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1932</div>
+                    <h3>Primeiro Livro</h3>
+                    <p>Publicação de "Poesias de Um Humilde", marcando o início de sua obra literária.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1939</div>
+                    <h3>Há Dois Mil Anos</h3>
+                    <p>Psicografia seu primeiro romance mediúnico, best-seller que o consagrou nacionalmente.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1959</div>
+                    <h3>Mudança para Uberaba</h3>
+                    <p>Transferência definitiva para Uberaba, MG, onde viveu até sua desencarnação.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1969</div>
+                    <h3>Centenário de Kardec</h3>
+                    <p>No dia 31 de março, psicografou dois livros em um único dia: "Passos da Vida" e "Estante da Vida".</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2002</div>
+                    <h3>Desencarnação</h3>
+                    <p>Parte para o plano espiritual em 30 de junho, deixando um legado de amor e serviço.</p>
+                </div>
+            </div>
         </div>
-        
-        <Separator className="bg-slate-800 mb-8" />
-        
-        <div className="text-center text-slate-500 text-sm">
-          <p>© 2024 Espiritismo e Chico Xavier. Site educativo e gratuito.</p>
-          <p className="mt-2">
-            "A caridade começa em casa, mas não deve terminar ali." — Chico Xavier
-          </p>
+    </section>
+
+    <section class="videos-section" id="videos">
+        <h2 class="section-title">Documentários e Vídeos</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/9sE5mD6z6jY" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Chico Xavier - O Mensageiro da Paz</h3>
+                    <p>Documentário completo sobre a vida e obra do médium, incluindo depoimentos exclusivos e imagens raras de suas palestras.</p>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Qh1VJ5z0d6k" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Entrevista Histórica - Programa Pinga Fogo</h3>
+                    <p>A famosa entrevista de Chico Xavier no programa Pinga Fogo, onde responde perguntas sobre a vida após a morte e a doutrina espírita.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/5W7K8z7X7Zo" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>O Filme "Chico Xavier"</h3>
+                    <p>Cenas do filme biográfico que retrata momentos marcantes da vida do médium, interpretado por Nelson Xavier.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/3sL8L8L8L8L" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>As Cartas de Chico Xavier</h3>
+                    <p>Documentário sobre o "Correio Fraterno" e as milhares de cartas psicografadas que trouxeram conforto a famílias em luto.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/7a8b9c0d1e2" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Chico e Emmanuel</h3>
+                    <p>Relato sobre a parceria entre Chico Xavier e seu guia espiritual Emmanuel, autor de muitas das obras mais importantes.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/1a2b3c4d5e6" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>O Legado Continua</h3>
+                    <p>Como as obras de Chico Xavier continuam impactando vidas no século XXI, com depoimentos de leitores e estudiosos.</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <section class="teachings-section" id="ensinamentos">
+        <h2 class="section-title">Ensinamentos de Luz</h2>
+        <div class="teachings-grid">
+            <div class="teaching-card">
+                <span class="teaching-number">01</span>
+                <h3>O Perdão</h3>
+                <p>"O espírito que adquirir a virtude do perdão não achará dificuldade em mais nada. Haja o que houver, aconteça o que acontecer, ele saberá administrar sua vida."</p>
+            </div>
+
+            <div class="teaching-card">
+                <span class="teaching-number">02</span>
+                <h3>A Caridade</h3>
+                <p>"A caridade é um exercício espiritual. Quem pratica o bem coloca em movimento as forças da alma. Quando os espíritos nos recomendam com insistência a prática da caridade, eles estão nos orientando no sentido de nossa própria evolução."</p>
+            </div>
+
+            <div class="teaching-card">
+                <span class="teaching-number">03</span>
+                <h3>O Amor ao Próximo</h3>
+                <p>"Viver é sempre dizer aos outros que eles são importantes. Que nós os amamos, porque um dia eles se vão e ficaremos com a impressão de que não os amamos o suficiente."</p>
+            </div>
+
+            <div class="teaching-card">
+                <span class="teaching-number">04</span>
+                <h3>A Esperança</h3>
+                <p>"Tudo tem seu apogeu e seu declínio... É natural que seja assim, todavia, quando tudo parece convergir para o que supomos o nada, eis que a vida ressurge, triunfante e bela! Novas folhas, novas flores, na infinita benção do recomeço!"</p>
+            </div>
+
+            <div class="teaching-card">
+                <span class="teaching-number">05</span>
+                <h3>A Verdade</h3>
+                <p>"A verdade que fere é pior que a mentira que consola. A mentira é uma bola de neve que, quanto mais é empurrada, maior e mais destruidora se torna."</p>
+            </div>
+
+            <div class="teaching-card">
+                <span class="teaching-number">06</span>
+                <h3>A Ação</h3>
+                <p>"Crê em ti mesmo, age e verá os resultados. Quando te esforças, a vida também se esforça para te ajudar. Quanto mais te convences de que podes ser feliz, mais as facilidades chegam a ti."</p>
+            </div>
+
+            <div class="teaching-card">
+                <span class="teaching-number">07</span>
+                <h3>O Presente</h3>
+                <p>"Se tiver que amar, ame hoje. Se tiver que sorrir, sorria hoje. Se tiver que chorar, chore hoje. Pois o importante é viver hoje. O ontem já foi e o amanhã talvez não venha."</p>
+            </div>
+
+            <div class="teaching-card">
+                <span class="teaching-number">08</span>
+                <h3>A Tolerância</h3>
+                <p>"A sabedoria superior tolera, a inferior julga; a superior alivia, a inferior culpa; a superior perdoa, a inferior condena."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="books-section" id="obras">
+        <h2 class="section-title">Obras Imortais</h2>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <span class="stat-number">460+</span>
+                <span class="stat-label">Livros Psicografados</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">45M</span>
+                <span class="stat-label">Exemplares Vendidos</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Idiomas Traduzidos</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">70</span>
+                <span class="stat-label">Anos de Obra</span>
+            </div>
+        </div>
+
+        <h3 style="text-align: center; margin-bottom: 2rem; color: var(--deep-blue); font-family: 'Cinzel', serif;">Principais Obras</h3>
+        
+        <div class="books-list">
+            <div class="book-item">
+                <span class="book-title">Nosso Lar</span>
+                <span class="book-author">por André Luiz</span>
+            </div>
+            <div class="book-item">
+                <span class="book-title">Há Dois Mil Anos</span>
+                <span class="book-author">por Emmanuel</span>
+            </div>
+            <div class="book-item">
+                <span class="book-title">Cinquenta Anos Depois</span>
+                <span class="book-author">por Emmanuel</span>
+            </div>
+            <div class="book-item">
+                <span class="book-title">Obreiros da Vida Eterna</span>
+                <span class="book-author">por André Luiz</span>
+            </div>
+            <div class="book-item">
+                <span class="book-title">Libertação</span>
+                <span class="book-author">por André Luiz</span>
+            </div>
+            <div class="book-item">
+                <span class="book-title">Missionários da Luz</span>
+                <span class="book-author">por André Luiz</span>
+            </div>
+            <div class="book-item">
+                <span class="book-title">Lázaro Redivivo</span>
+                <span class="book-author">por Irmão X</span>
+            </div>
+            <div class="book-item">
+                <span class="book-title">E a Vida Continua</span>
+                <span class="book-author">por André Luiz</span>
+            </div>
+            <div class="book-item">
+                <span class="book-title">Entre a Terra e o Céu</span>
+                <span class="book-author">por André Luiz</span>
+            </div>
+            <div class="book-item">
+                <span class="book-title">Nos Domínios da Mediunidade</span>
+                <span class="book-author">por André Luiz</span>
+            </div>
+            <div class="book-item">
+                <span class="book-title">Ação e Reação</span>
+                <span class="book-author">por André Luiz</span>
+            </div>
+            <div class="book-item">
+                <span class="book-title">Evangelho Segundo o Espiritismo</span>
+                <span class="book-author">comentários de Emmanuel</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section" id="galeria">
+        <h2 class="section-title">Galeria de Imagens</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/geae1992.com.br/5f48702e8afaa433d98f763957356577e9089691.jpg" alt="Chico Xavier em 1965">
+                <div class="gallery-overlay">
+                    <p>Viagem aos EUA - 1965</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/s2-oglobo.glbimg.com/c7db8d4a28b07c6293d41f9cd4c87917d55f5e93.jpeg" alt="Chico Xavier 1935">
+                <div class="gallery-overlay">
+                    <p>Entrevista de 1935</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/upload.wikimedia.org/76a1ed78f9b7816b454359d39453d033a3f756a5.jpg" alt="Chico Psicografando">
+                <div class="gallery-overlay">
+                    <p>Momento de Psicografia</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/psi-encyclopedia.spr.ac.uk/ce961df6e3aee6b3bbb5a21245625a842c86dfe7.jpg" alt="Chico Xavier Retrato">
+                <div class="gallery-overlay">
+                    <p>Retrato Clássico</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/img.travessa.com.br/ccf7a754e24f16c66cd71c090f732c03d90f16e1.jpg" alt="Chico em São Paulo">
+                <div class="gallery-overlay">
+                    <p>Visita a São Paulo</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/upload.wikimedia.org/2f456d025d1b2d6f88faba68f7ad4a6af35a0e48.jpg" alt="Estátua Chico Xavier">
+                <div class="gallery-overlay">
+                    <p>Estátua em Pedro Leopoldo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footer-quote">"Deixe algum sinal de alegria onde passe."</p>
+        <div class="footer-info">
+            <p>Chico Xavier (1910-2002)</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">Site dedicado à memória e ao legado do maior médium brasileiro</p>
+        </div>
     </footer>
-  );
-}
 
-// Main App
-function App() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <Navigation />
-      <main>
-        <HeroSection />
-        <ChicoSection />
-        <StudiesSection />
-      </main>
-      <Footer />
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Imagem ampliada" id="lightbox-img">
     </div>
-  );
-}
 
-export default App;
-/* App-specific styles */
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
+        // Lightbox functionality
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
 
-/* Selection color */
-::selection {
-  background-color: rgba(251, 191, 36, 0.3);
-  color: inherit;
-}
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
 
-/* Focus styles */
-*:focus-visible {
-  outline: 2px solid rgba(251, 191, 36, 0.5);
-  outline-offset: 2px;
-}
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
 
-/* Line clamp utilities */
-.line-clamp-1 {
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
 
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
 
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
-
-@layer base {
-  :root {
-    --background: 220 25% 8%;
-    --foreground: 45 30% 95%;
-    --card: 220 20% 12%;
-    --card-foreground: 45 30% 95%;
-    --popover: 220 20% 12%;
-    --popover-foreground: 45 30% 95%;
-    --primary: 45 60% 55%;
-    --primary-foreground: 220 25% 8%;
-    --secondary: 220 15% 18%;
-    --secondary-foreground: 45 30% 95%;
-    --muted: 220 15% 18%;
-    --muted-foreground: 220 10% 60%;
-    --accent: 45 60% 55%;
-    --accent-foreground: 220 25% 8%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
-    --ring: 45 60% 55%;
-    --radius: 0.625rem;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', sans-serif;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
-  }
-}
-
-@layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500;
-  }
-  
-  .glow-gold {
-    box-shadow: 0 0 30px rgba(251, 191, 36, 0.3), 0 0 60px rgba(251, 191, 36, 0.1);
-  }
-  
-  .glow-soft {
-    box-shadow: 0 0 40px rgba(251, 191, 36, 0.15);
-  }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: hsl(220 25% 8%);
-}
-
-::-webkit-scrollbar-thumb {
-  background: hsl(45 60% 35%);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(45 60% 45%);
-}
-
-/* Animations */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-
-.animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.1), transparent);
-  background-size: 200% 100%;
-  animation: shimmer 3s infinite;
-}
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
-}
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
-
-import { cn } from "@/lib/utils"
-
-const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
-  {
-    variants: {
-      variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
-        outline:
-          "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
-        link: "text-primary underline-offset-4 hover:underline",
-      },
-      size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
-        icon: "size-9",
-        "icon-sm": "size-8",
-        "icon-lg": "size-10",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default",
-    },
-  }
-)
-
-function Button({
-  className,
-  variant = "default",
-  size = "default",
-  asChild = false,
-  ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean
-  }) {
-  const Comp = asChild ? Slot : "button"
-
-  return (
-    <Comp
-      data-slot="button"
-      data-variant={variant}
-      data-size={size}
-      className={cn(buttonVariants({ variant, size, className }))}
-      {...props}
-    />
-  )
-}
-
-export { Button, buttonVariants }
-import * as React from "react"
-import * as DialogPrimitive from "@radix-ui/react-dialog"
-import { XIcon } from "lucide-react"
-
-import { cn } from "@/lib/utils"
-
-function Dialog({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Root>) {
-  return <DialogPrimitive.Root data-slot="dialog" {...props} />
-}
-
-function DialogTrigger({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Trigger>) {
-  return <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props} />
-}
-
-function DialogPortal({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Portal>) {
-  return <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />
-}
-
-function DialogClose({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Close>) {
-  return <DialogPrimitive.Close data-slot="dialog-close" {...props} />
-}
-
-function DialogOverlay({
-  className,
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Overlay>) {
-  return (
-    <DialogPrimitive.Overlay
-      data-slot="dialog-overlay"
-      className={cn(
-        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50",
-        className
-      )}
-      {...props}
-    />
-  )
-}
-
-function DialogContent({
-  className,
-  children,
-  showCloseButton = true,
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Content> & {
-  showCloseButton?: boolean
-}) {
-  return (
-    <DialogPortal data-slot="dialog-portal">
-      <DialogOverlay />
-      <DialogPrimitive.Content
-        data-slot="dialog-content"
-        className={cn(
-          "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 outline-none sm:max-w-lg",
-          className
-        )}
-        {...props}
-      >
-        {children}
-        {showCloseButton && (
-          <DialogPrimitive.Close
-            data-slot="dialog-close"
-            className="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
-          >
-            <XIcon />
-            <span className="sr-only">Close</span>
-          </DialogPrimitive.Close>
-        )}
-      </DialogPrimitive.Content>
-    </DialogPortal>
-  )
-}
-
-function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="dialog-header"
-      className={cn("flex flex-col gap-2 text-center sm:text-left", className)}
-      {...props}
-    />
-  )
-}
-
-function DialogFooter({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="dialog-footer"
-      className={cn(
-        "flex flex-col-reverse gap-2 sm:flex-row sm:justify-end",
-        className
-      )}
-      {...props}
-    />
-  )
-}
-
-function DialogTitle({
-  className,
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Title>) {
-  return (
-    <DialogPrimitive.Title
-      data-slot="dialog-title"
-      className={cn("text-lg leading-none font-semibold", className)}
-      {...props}
-    />
-  )
-}
-
-function DialogDescription({
-  className,
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Description>) {
-  return (
-    <DialogPrimitive.Description
-      data-slot="dialog-description"
-      className={cn("text-muted-foreground text-sm", className)}
-      {...props}
-    />
-  )
-}
-
-export {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogOverlay,
-  DialogPortal,
-  DialogTitle,
-  DialogTrigger,
-}
-import * as React from "react"
-import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { ChevronDownIcon } from "lucide-react"
-
-import { cn } from "@/lib/utils"
-
-function Accordion({
-  ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Root>) {
-  return <AccordionPrimitive.Root data-slot="accordion" {...props} />
-}
-
-function AccordionItem({
-  className,
-  ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Item>) {
-  return (
-    <AccordionPrimitive.Item
-      data-slot="accordion-item"
-      className={cn("border-b last:border-b-0", className)}
-      {...props}
-    />
-  )
-}
-
-function AccordionTrigger({
-  className,
-  children,
-  ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Trigger>) {
-  return (
-    <AccordionPrimitive.Header className="flex">
-      <AccordionPrimitive.Trigger
-        data-slot="accordion-trigger"
-        className={cn(
-          "focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left text-sm font-medium transition-all outline-none hover:underline focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-180",
-          className
-        )}
-        {...props}
-      >
-        {children}
-        <ChevronDownIcon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
-      </AccordionPrimitive.Trigger>
-    </AccordionPrimitive.Header>
-  )
-}
-
-function AccordionContent({
-  className,
-  children,
-  ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Content>) {
-  return (
-    <AccordionPrimitive.Content
-      data-slot="accordion-content"
-      className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm"
-      {...props}
-    >
-      <div className={cn("pt-0 pb-4", className)}>{children}</div>
-    </AccordionPrimitive.Content>
-  )
-}
-
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
-
-import { cn } from "@/lib/utils"
-
-const badgeVariants = cva(
-  "inline-flex items-center justify-center rounded-full border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden",
-  {
-    variants: {
-      variant: {
-        default:
-          "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
-        secondary:
-          "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90",
-        destructive:
-          "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible
+        document.querySelectorAll('.timeline-item, .video-card, .teaching-card, .book-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
